@@ -54,6 +54,23 @@ form {
 .main-logo {
     width: 100%;
     padding: 0 20% 5vh;
+    transition: transform .2s;
+    animation-name: slide-down;
+    animation-duration: 1s;
+    position: relative;
+}
+
+@keyframes slide-down {
+    0% {
+        top: -200px;
+    }
+    100% {
+        top: 0;
+    }
+}
+
+.main-logo:hover {
+    transform: scale(1.1);
 }
 
 .search-input input {
@@ -73,6 +90,17 @@ form {
 
 .search-input {
     position: relative;
+    animation-name: slide-right;
+    animation-duration: 1s;
+}
+
+@keyframes slide-right {
+    0% {
+        left: -300px;
+    }
+    100% {
+        left: 0;
+    }
 }
 
 .icon {
@@ -93,6 +121,18 @@ form {
     display: flex;
     align-items: center;
     justify-content: center;
+    animation-name: slide-up;
+    animation-duration: 1s;
+    position: relative;
+}
+
+@keyframes slide-up {
+    0% {
+        bottom: -200px;
+    }
+    100% {
+        bottom: 0;
+    }
 }
 
 .buttons button {
@@ -115,4 +155,7 @@ form p {
     font-size: 13px;
     text-align: center;
     margin-top: 5vh;
+    animation-name: slide-up;
+    animation-duration: 1s;
+    position: relative;
 }
